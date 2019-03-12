@@ -15,7 +15,7 @@ import (
 const CITT = 0xFFFF
 
 var (
-	Version string = ""
+	Version   string = ""
 	BuildTime string = ""
 )
 
@@ -40,7 +40,7 @@ func main() {
 	var g errgroup.Group
 
 	if *parallel <= 0 {
-		*parallel=1
+		*parallel = 1
 	}
 	sema := make(chan struct{}, *parallel)
 	for _, a := range flag.Args() {
